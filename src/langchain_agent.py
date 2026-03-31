@@ -30,12 +30,10 @@ async def main():
         "messages": [
             {
                 "role": "system",
-                "content": "Debes usar las herramientas disponibles para resolver la petición. No respondas de memoria si existe una tool adecuada."
-            },
+                "content": "Eres un analista de código. Usa 'list_files' para explorar y 'get_file_stats' para analizar archivos. Utiliza exclusivamente estas herramientas para interactuar con el sistema de archivos."            },
             {
                 "role": "user",
-                "content": "Llama obligatoriamente a la tool hello con name='Norbert' y después a la tool add con a=7 y b=5. Luego dame una frase final en español."
-            }
+                "content": "Busca un archivo con extensión '.md' en la carpeta actual y dime cuántas palabras tiene usando tu herramienta de estadísticas."            }
         ]
     }
 )

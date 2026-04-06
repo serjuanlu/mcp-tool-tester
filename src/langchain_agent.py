@@ -29,14 +29,16 @@ async def main():
 
     result = await agent.ainvoke(
     {
-        "messages": [
-            {
-                "role": "system",
-                "content": "Eres un analista de código. Usa 'list_files' para explorar y 'get_file_stats' para analizar archivos. Utiliza exclusivamente estas herramientas para interactuar con el sistema de archivos."            },
-            {
-                "role": "user",
-                "content": "Busca un archivo con extensión '.md' en la carpeta actual y dime cuántas palabras tiene usando tu herramienta de estadísticas."            }
-        ]
+"messages": [
+        {
+            "role": "system",
+            "content": "Eres un robot de archivos. SOLO usas herramientas. NO escribas explicaciones. Si te pido algo, usa la tool correspondiente inmediatamente."
+        },
+        {
+            "role": "user",
+            "content": "1. Usa list_files en '.', 'src' y 'servers'. 2. Usa read_project en 'servers/demo_server.py'. 3. Escribe un resumen de lo visto en el proyecto en 'RESUMEN.md' usando write_to_file. Saluda a Juanlu al final."
+        }
+    ]
     }
 )
 

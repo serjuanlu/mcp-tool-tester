@@ -3,3 +3,6 @@ langchain
 langchain-mcp-adapters
 langchain-ollama
 python-dotenv
+langsmith
+httpx
+duckduckgo-search
